@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSpeedPix2PDF Web App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>iSpeedPix2PDF</h1>
+        
+        <!-- File picker for selecting images -->
+        <input type="file" id="imageInput" accept="image/*" multiple>
+        
+        <!-- Text input for the custom file name -->
+        <input type="text" id="fileName" placeholder="Enter File Name (optional)">
+        
+        <!-- Dropdown for selecting image rotation -->
+        <select id="rotationOption">
+            <option value="default">Default (Rotate to Portrait)</option>
+            <option value="nonOriented">Non-Oriented (Keep Original)</option>
+            <option value="fixedPortrait">Fixed Portrait (Keep Page Portrait)</option>
+        </select>
+        
+        <!-- Button to create PDF -->
+        <button id="createPdfButton">Create PDF</button>
+        
+    </div>
+</body>
+</html>
